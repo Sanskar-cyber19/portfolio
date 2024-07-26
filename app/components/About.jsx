@@ -7,7 +7,7 @@ import { Gap } from "./Other"
 export function About(){
 	return(
 		<section className={style.reverse} id="about">
-			<img src="/about.jpg" className={style.image} alt="img" />
+			<Image width={200} height={200} src="/about.jpg" className={style.image} alt="img" />
 					<div>
 					<span className={style.muted}>WHO WE ARE</span>
 					<h2>About us</h2>
@@ -26,7 +26,7 @@ export function Mission(){
 					<h3>Mission</h3>
 					<p>Our Mission is to provide innovative solution<br/> that einpower business to trive in the digital age.</p>
 					</div>
-					<img src="/about.jpg" className={style.image} alt="img" />
+					<Image width={200} height={200} src="/about.jpg" className={style.image} alt="img" />
 				</section>
 	)
 }
@@ -77,7 +77,7 @@ export function Features(){
 						</li>
 					))}
 				</ul>
-				<img src="/develop-web.gif" className={style.image} alt="img" />
+				<Image width={200} height={200} src="/develop-web.gif" className={style.image} alt="img" />
 			</div>
 		</section>
 	)
@@ -101,7 +101,7 @@ export function Contact(){
 					<br/>
 					<button id={style.btn} className={style.button} style={{textAlign:"center"}}>Submit</button>
 				</form>
-				<img className={style.half} src="/contact.png" alt="img"/>
+				<Image width={200} height={200} className={style.half} src="/contact.png" alt="img"/>
 			</div>
 			<Gap/>
 		</section>
