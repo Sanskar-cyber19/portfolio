@@ -7,7 +7,7 @@ import { Gap } from "./Other"
 export function About(){
 	return(
 		<section className={style.reverse} id="about">
-			<Image width={200} height={200} src="/about.jpg" className={style.image} alt="img" />
+			<Image src="/about.jpg" className={style.image} alt="img" />
 					<div>
 					<span className={style.muted}>WHO WE ARE</span>
 					<h2>About us</h2>
@@ -26,7 +26,7 @@ export function Mission(){
 					<h3>Mission</h3>
 					<p>Our Mission is to provide innovative solution<br/> that einpower business to trive in the digital age.</p>
 					</div>
-					<Image width={200} height={200} src="/about.jpg" className={style.image} alt="img" />
+					<Image src="/about.jpg" className={style.image} alt="img" />
 				</section>
 	)
 }
