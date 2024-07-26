@@ -15,7 +15,7 @@ export function FAQ(){
 			<h3>Frequently Asked Questions</h3>
 			<Gap/>
 			<div className={style.accordion}>
-				<Image width={200} height={200} src="/about.jpg" className={style.image} alt="img" />
+				<Image width={200} height={200} src="/about.jpg" className={style.image} alt="im" />
 				<div>
 					<div className={style.faq}>
 						<h4 className="accordion-header d-flex" id="headingOne">
@@ -81,7 +81,7 @@ export function Portfolio(){
 			<div className={style.grid}>
 				{PortfolioData.map((p)=>{
 					return(
-						<Link  href={p.link} className={style.small} key={p.id}><Image width={200} height={200} src={p.src} className={style.full} alt="img"/></Link>
+						<Link  href={p.link} className={style.small} key={p.id}><Image width={200} height={200} src={p.src} className={style.full} alt={p.link}/></Link>
 					)
 				})}
 			</div>
@@ -105,8 +105,8 @@ export function Team(){
 				{team.map((t)=>(
 					<div className={style.team} key={t.id} style={{paddingBottom:"1rem"}}>
 						<div>
-						<Image src={t.img} className="img-fluid" alt='img'/>
-						<Image src="/team-shape.svg" className="img-fluid" id={style.teamShape} alt="img"/>
+						<Image src={t.img} className="img-fluid" alt={t.id}/>
+						<Image src="/team-shape.svg" className="img-fluid" id={style.teamShape} alt={t.id}/>
 						</div>
 						<h5 style={{color:"var(--primary)"}}>{t.name}</h5>
 						<span className={style.darkmuted} style={{marginBottom:"25px"}}>{t.role}</span>
@@ -177,7 +177,7 @@ export function Feedback(){
 							
 						</div>
 						<p className="px-3">{f.info}</p>
-						<Image width={100} height={100} src="/user.jpg" style={{borderRadius:"50px"}} alt="img" />
+						<Image width={100} height={100} src="/user.jpg" style={{borderRadius:"50px"}} alt={f.name} />
 						<h5 style={{color:"var(--primary)"}}>{f.name}</h5>
 						<span className={style.darkmuted}>{f.rol}</span>
 					</div>
