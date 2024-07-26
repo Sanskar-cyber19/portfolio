@@ -81,7 +81,7 @@ export function Portfolio(){
 			<div className={style.grid}>
 				{PortfolioData.map((p)=>{
 					return(
-						<Link  href={p.link} className={style.small} key={p.id}><Image width={200} height={200} src={p.src} className={style.full} alt={p.link}/></Link>
+						<Link  href={p.link} className={style.small} key={p.id}><Image width={200} height={200} src={p.src} className={style.full} alt={p.id}/></Link>
 					)
 				})}
 			</div>
@@ -106,7 +106,7 @@ export function Team(){
 					<div className={style.team} key={t.id} style={{paddingBottom:"1rem"}}>
 						<div>
 						<Image src={t.img} className="img-fluid" alt={t.id}/>
-						<Image src="/team-shape.svg" className="img-fluid" id={style.teamShape} alt={t.id}/>
+						<Image src="/team-shape.svg" className="img-fluid" id={style.teamShape} alt={t.role}/>
 						</div>
 						<h5 style={{color:"var(--primary)"}}>{t.name}</h5>
 						<span className={style.darkmuted} style={{marginBottom:"25px"}}>{t.role}</span>
@@ -145,7 +145,7 @@ export function Clients(){
 					>
 					{client.map((c)=>(
 						<SwiperSlide key={c.id}>
-							<Image width={100} height={100} src={c.img} className="img-fluid" width="100px" alt={c.name}/>
+							<Image width={100} height={100} src={c.img} className="img-fluid" width="100px" alt={c.id}/>
 						</SwiperSlide>						
 					))}
 						
@@ -177,7 +177,7 @@ export function Feedback(){
 							
 						</div>
 						<p className="px-3">{f.info}</p>
-						<Image width={100} height={100} src="/user.jpg" style={{borderRadius:"50px"}} alt={f.name} />
+						<Image width={100} height={100} src="/user.jpg" style={{borderRadius:"50px"}} alt={f.id} />
 						<h5 style={{color:"var(--primary)"}}>{f.name}</h5>
 						<span className={style.darkmuted}>{f.rol}</span>
 					</div>
