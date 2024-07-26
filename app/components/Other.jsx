@@ -145,7 +145,7 @@ export function Clients(){
 					>
 					{client.map((c)=>(
 						<SwiperSlide key={c.id}>
-							<Image width={100} height={100} src={c.img} className="img-fluid" width="100px" alt={c.id}/>
+							<Image width={100} height={100} src={c.img} className="img-fluid" alt={c.id}/>
 						</SwiperSlide>						
 					))}
 						
