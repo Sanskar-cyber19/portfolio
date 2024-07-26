@@ -3,12 +3,10 @@ import React from 'react';
 import Link from "next/link";
 import style from "../page.module.css";
 import { FaArrowDown } from "react-icons/fa";
+import Image from 'next/image';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/react';
 import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 
 export function FAQ(){
 	return(
@@ -83,7 +81,7 @@ export function Portfolio(){
 			<div className={style.grid}>
 				{PortfolioData.map((p)=>{
 					return(
-						<Link  href={p.link} className={style.small} key={p.id}><img src={p.src} className={style.full} alt="img"/></Link>
+						<Link  href={p.link} className={style.small} key={p.id}><Image width={200} height={200} src={p.src} className={style.full} alt="img"/></Link>
 					)
 				})}
 			</div>
@@ -107,8 +105,8 @@ export function Team(){
 				{team.map((t)=>(
 					<div className={style.team} key={t.id} style={{paddingBottom:"1rem"}}>
 						<div>
-						<img src={t.img} className="img-fluid" alt='img'/>
-						<img src="/team-shape.svg" className="img-fluid" id={style.teamShape} alt="img"/>
+						<Image src={t.img} className="img-fluid" alt='img'/>
+						<Image src="/team-shape.svg" className="img-fluid" id={style.teamShape} alt="img"/>
 						</div>
 						<h5 style={{color:"var(--primary)"}}>{t.name}</h5>
 						<span className={style.darkmuted} style={{marginBottom:"25px"}}>{t.role}</span>
@@ -140,22 +138,14 @@ export function Clients(){
 				<Swiper
 					speed={400}
 					slidesPerView={3}
-					autoplay={{
-						delay:4000,
-					}}
 					spaceBetween={10}
 					centeredSlides={true}
 					loop={true}
-					pagination={{
-						type: 'bullets',
-						clickable: true,
-					}}
-					module={[Autoplay, Pagination]}
 					className="mySwiper"
 					>
 					{client.map((c)=>(
-						<SwiperSlide>
-							<img src={c.img} className="img-fluid" width="100px" alt={c.name}/>
+						<SwiperSlide key={c.id}>
+							<Image width={100} height={100} src={c.img} className="img-fluid" width="100px" alt={c.name}/>
 						</SwiperSlide>						
 					))}
 						
@@ -187,7 +177,7 @@ export function Feedback(){
 							
 						</div>
 						<p className="px-3">{f.info}</p>
-						<img src="/user.jpg" style={{width:"100px",borderRadius:"50px"}} alt="img" />
+						<Image width={100} height={100} src="/user.jpg" style={{borderRadius:"50px"}} alt="img" />
 						<h5 style={{color:"var(--primary)"}}>{f.name}</h5>
 						<span className={style.darkmuted}>{f.rol}</span>
 					</div>
