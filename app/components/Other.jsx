@@ -177,7 +177,7 @@ export function Feedback(){
 							
 						</div>
 						<p className="px-3">{f.info}</p>
-						<Image src="/user.jpg" style={{borderRadius:"50px"}} alt={f.id} />
+						<Image src="/user.jpg" style={{width:"100px",borderRadius:"50px"}} alt={f.id} />
 						<h5 style={{color:"var(--primary)"}}>{f.name}</h5>
 						<span className={style.darkmuted}>{f.rol}</span>
 					</div>
