@@ -81,7 +81,7 @@ export function Portfolio(){
 			<div className={style.grid}>
 				{PortfolioData.map((p)=>{
 					return(
-						<Link  href={p.link} className={style.small} key={p.id}><Image width={200} height={200} src={p.src} className={style.full} alt={p.id}/></Link>
+						<Link  href={p.link} className={style.small} key={p.id}><Image src={p.src} className={style.full} alt={p.id}/></Link>
 					)
 				})}
 			</div>
@@ -177,7 +177,7 @@ export function Feedback(){
 							
 						</div>
 						<p className="px-3">{f.info}</p>
-						<Image width={100} height={100} src="/user.jpg" style={{borderRadius:"50px"}} alt={f.id} />
+						<Image src="/user.jpg" style={{borderRadius:"50px"}} alt={f.id} />
 						<h5 style={{color:"var(--primary)"}}>{f.name}</h5>
 						<span className={style.darkmuted}>{f.rol}</span>
 					</div>
