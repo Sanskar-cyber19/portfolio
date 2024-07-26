@@ -15,7 +15,7 @@ export function FAQ(){
 			<h3>Frequently Asked Questions</h3>
 			<Gap/>
 			<div className={style.accordion}>
-				<Image width={200} height={200} src="/about.jpg" className={style.image} alt="im" />
+				<Image src="/about.jpg" className={style.image} alt="im" />
 				<div>
 					<div className={style.faq}>
 						<h4 className="accordion-header d-flex" id="headingOne">
