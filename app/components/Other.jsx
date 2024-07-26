@@ -5,7 +5,7 @@ import style from "../page.module.css";
 import { FaArrowDown } from "react-icons/fa";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper';
+import { Autoplay, Pagination } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
